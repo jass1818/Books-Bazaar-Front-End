@@ -1,0 +1,64 @@
+<!-- 📌 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand fw-bold" href="#">📚 Books Bazaar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">My Orders</a></li>
+      <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm mx-2" href="#">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 💥 Hero Section -->
+<section class="hero d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-4 fw-bold">Discover Your Next Favorite Book</h1>
+    <p class="lead">Thousands of books. One store. One click away.</p>
+    <a class="btn btn-warning btn-lg mt-3" href="#">Start Exploring</a>
+  </div>
+</section>
+
+<!-- 🧩 Categories -->
+<section class="container py-5">
+  <h2 class="text-center mb-4 fw-bold">Book Categories</h2>
+  <div class="row text-center">
+    <div class="col-md-3 mb-4" *ngFor="let category of ['Fiction', 'Non-Fiction', 'Comics', 'Academic']">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ category }}</h5>
+          <p class="card-text">Explore top {{ category }} books handpicked for you.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Browse</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🔥 Trending Books -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">🔥 Trending Now</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4" *ngFor="let book of [1,2,3,4]">
+        <div class="card shadow">
+          <img src="https://via.placeholder.com/150x200" class="card-img-top" alt="book">
+          <div class="card-body">
+            <h5 class="card-title">Book Title {{book}}</h5>
+            <p class="card-text text-muted">by Author</p>
+            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📞 Footer -->
+<footer class="bg-dark text-light text-center p-3">
+  <p class="m-0">© 2025 Books Bazaar | Made with ❤️ by Jas</p>
+</footer>
